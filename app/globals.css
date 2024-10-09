@@ -35,3 +35,17 @@ body {
     opacity: 1;
   }
 }
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-animated {
+  background: linear-gradient(270deg, #f5ce94, #dd79c4, #8d9cfe, #7fd9a8); /* Subtle, desaturated colors */
+  background-size: 300% 300%; /* Adjust the gradient size for a gentler effect */
+  animation: wave 30s ease-in-out infinite; /* Slower, smoother animation */
+}

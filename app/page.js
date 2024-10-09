@@ -1,16 +1,18 @@
-import Image from "next/image";
-import MyInfo from "./week-2/student-info"; // Assuming this is a component you want to keep
+import MyInfo from "./week-2/student-info";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-r from-gray-800 to-gray-900 p-6 flex flex-col items-center fade-in">
-      <div className="flex-grow flex flex-col items-center">
-        <h1 className="text-5xl font-extrabold text-white mb-6 text-center">
+    <main className="min-h-screen bg-gradient-to-r from-slate-800 to-slate-950 flex flex-col justify-between items-center">
+      <div className="flex-grow flex flex-col items-center  p mb-20">
+        {/* Main Heading */}
+        <h1 className="text-5xl font-extrabold text-white my-8 text-center">
           CPRG 306: Web Development 2 - Assignments
         </h1>
+
+        {/* Main Content - Week Links */}
         <ul className="bg-slate-800 rounded-lg shadow-lg p-8 space-y-4 w-full max-w-lg">
-          {["Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7"].map((week, index) => (
+          {["Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9"].map((week, index) => (
             <li key={index} className="hover:shadow-xl transition-shadow duration-200">
               <Link
                 href={`./week-${index + 2}/`}
@@ -22,9 +24,9 @@ export default function Home() {
           ))}
         </ul>
       </div>
-      <div className="bg-slate-950 text-gray-400 text-center py-4 w-screen mt-6 rounded-t-lg">
-        Developed by <MyInfo /> | All rights reserved © 2024
-      </div>
+
+      {/* Footer */}
+      <div className=" w-full"><MyInfo/></div>
     </main>
   );
 }
