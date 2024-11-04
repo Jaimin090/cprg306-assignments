@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Item from "./item";
 
-export default function ItemList({ darkMode, items }) {
+export default function ItemList({items }) {
   const [sortBy, setSortBy] = useState("name"); 
 
   // Sorting the items based on the sortBy state
@@ -50,7 +50,6 @@ export default function ItemList({ darkMode, items }) {
               name={item.name}
               quantity={item.quantity}
               category={item.category}
-              darkMode={darkMode}
             />
           ))}
         </ul>
