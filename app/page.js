@@ -12,7 +12,7 @@ export default function Home() {
 
         {/* Main Content - Week Links */}
         <ul className="bg-slate-800 rounded-lg shadow-lg p-8 space-y-4 w-full max-w-lg">
-          {["Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9"].map((week, index) => (
+          {["Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12"].map((week, index) => (
             <li key={index} className="hover:shadow-xl transition-shadow duration-200">
               <Link
                 href={`./week-${index + 2}/`}

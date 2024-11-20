@@ -27,7 +27,7 @@ export default function NewItem({onAddItem}) {
             return;
         }
 
-    const item = { id: Math.random().toString(36).substr(2, 9), name, quantity, category };
+    const item = { id: Math.random().toString(36).substring(2, 9), name, quantity, category };
     onAddItem(item);
 
     setName('');
